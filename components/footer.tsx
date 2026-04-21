@@ -78,7 +78,7 @@ export function Footer() {
                 </Button>
               </a>
               <a
-                href="//Alaa-Khaled-Flutter-Developer-Resume.pdf"
+                href="//ALaa_Khaled_Senior Mobile Application Developer (Flutter)_resume.pdf"
                 download
               >
                 <Button
