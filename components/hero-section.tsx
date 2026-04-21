@@ -153,7 +153,7 @@ export function HeroSection() {
                   </Button>
                 </a>
 
-                <a href="/ALaa_Khaled_Senior Mobile Application Developer (Flutter)_resume.pdf" download>
+                <a href="/ALaa_Khaled_Senior Mobile Application Developer (Flutter)_resume.pdf">
                   <Button variant="ghost" size="icon" className="text-primary hover:bg-primary dark:hover:bg-primary/80 hover:scale-110 transition-all duration-300">
                     <Download />
                   </Button>
