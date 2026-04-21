@@ -17,7 +17,7 @@ export function LoadingSpinner({ progress = 0 }: { progress?: number }) {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-background">
       <Image
-        src="/favicon.png"
+        src="/favicon.ico"
         alt="Favicon"
         width={64}
         height={64}

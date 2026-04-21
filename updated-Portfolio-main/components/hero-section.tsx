@@ -92,11 +92,7 @@ export function HeroSection() {
 
             {/* Description */}
             <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-              Flutter Developer with 4+ years of experience building scalable, 
-              high-performance mobile applications for Android and iOS. Specialized in Clean Architecture
-               and state management solutions such as Bloc, GetX, and Provider. Experienced in integrating
-               Firebase, RESTful APIs, and payment systems like Stripe and PayPal. Contributed to the development
-                and successful launch of multiple production-ready apps, with a strong focus on performance, scalability, and user experience.
+              Flutter Developer (4+ years) building scalable, high-performance Android & iOS apps. Expert in Clean Architecture, Bloc/GetX/Provider, Firebase, APIs, and payments (Stripe, PayPal). Delivered production apps with strong performance, scalability, and UX.
             </p>
 
             {/* CTA Buttons */}
