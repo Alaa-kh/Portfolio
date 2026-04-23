@@ -90,6 +90,33 @@ const projects: Project[] = [
     githubUrl:
       "https://play.google.com/store/apps/details?id=successes.blog.step_app",
   },
+
+
+  {
+    id: "flutter-step",
+    title: "Step App",
+    description:
+      "An app that connects advertisers with drivers to display ads on cars and provide additional income for drivers.",
+    longDescription:
+      "Khutwa App is a platform that connects advertisers with advertising campaigns to drivers to facilitate displaying ads on cars. The app provides an opportunity for additional income for drivers through their movement with their cars within the city. The project aims to integrate mobile marketing with supporting flexible income for drivers.",
+    image: "/step.png",
+    technologies: [
+      "Flutter",
+      "Dart",
+      "Animations",
+      "Clean Code",
+      "Notifications",
+      "API Integration",
+      "State Management",
+      "Responsive Design",
+    ],
+
+    githubUrl:
+      "https://play.google.com/store/apps/details?id=com.kutwah.driver&pcampaignid=web_share",
+  },
+
+
+
   {
     id: "flutter-poke",
     title: "Poke-Book App",
@@ -152,25 +179,7 @@ const projects: Project[] = [
       "Responsive Design",
     ],
   },
-  {
-    id: "flutter-step",
-    title: "Step App",
-    description:
-      "An app that connects advertisers with drivers to display ads on cars and provide additional income for drivers.",
-    longDescription:
-      "Khutwa App is a platform that connects advertisers with advertising campaigns to drivers to facilitate displaying ads on cars. The app provides an opportunity for additional income for drivers through their movement with their cars within the city. The project aims to integrate mobile marketing with supporting flexible income for drivers.",
-    image: "/step.png",
-    technologies: [
-      "Flutter",
-      "Dart",
-      "Animations",
-      "Clean Code",
-      "Notifications",
-      "API Integration",
-      "State Management",
-      "Responsive Design",
-    ],
-  },
+
 ];
 
 export function WorkSection() {
