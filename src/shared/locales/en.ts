@@ -4,7 +4,7 @@ export const en: TranslationDictionary = {
   meta: {
     title: 'Alaa Khaled | Software Developer',
     description:
-      'Software developer crafting modern web, mobile, and full-stack digital experiences with clean architecture and polished UX.',
+      'Software developer crafting modern web and mobile digital experiences with clean architecture and polished UX.',
   },
   brand: {
     name: 'Alaa Khaled',
@@ -32,36 +32,35 @@ export const en: TranslationDictionary = {
     ar: 'AR',
   },
   hero: {
-    eyebrow: 'Experienced Software Developer',
-    title: 'Software Developer crafting modern digital experiences.',
-    description:
-      'With years of real-world experience and large-scale projects behind me, I build websites, web and mobile apps, and full-stack solutions with the polish and engineering quality serious products deserve.',
+    eyebrow: 'Software Engineer',
+    title: 'Digital experiences, crafted with care.',
+    description: 'Websites, web apps, and mobile — crafted with impact and polish.',
     highlights: [
-      'Years of experience',
-      'Large real-world projects',
-      'Websites & web apps',
-      'Mobile & Flutter',
-      'Full-stack solutions',
+      'Web',
+      'Mobile',
+      'Flutter',
+      'UI/UX',
+      'React',
     ],
     viewWork: 'View My Work',
     contact: 'Contact Me',
-    visualLabel: 'Code-inspired abstract visual',
+    visualLabel: 'Developer workspace',
   },
   about: {
     eyebrow: 'About',
-    title: 'Long experience, major projects, results that speak.',
+    title: 'I build digital products that command attention — strong quality, strong performance.',
     summary:
-      'I am a software developer with years of hands-on experience building websites, web apps, mobile apps, and full-stack solutions — not only Flutter. I have delivered large, real-world projects and polished products that clients trust and users rely on. Known for precision, craftsmanship, and turning complex ideas into smooth, professional digital experiences.',
-    approachTitle: 'Development approach',
+      'Alaa Khaled — a software developer who turns ideas into usable websites and apps. I work across web and mobile, delivering real products with polished quality and a smooth user experience.',
+    approachTitle: 'How I work',
     approach:
-      'I combine deep practical experience with strong engineering taste: clear requirements, scalable architecture, and high-quality delivery across performance, security, UX, and code that stays solid as the product grows.',
-    expertiseTitle: 'Where I excel',
+      'I start by clarifying the goal, then design a clean experience and build it with structured, scalable code. I care about the details that last: speed, usability, and stability after launch — not just how the page looks.',
+    expertiseTitle: 'What I deliver',
     expertise: [
-      'Modern websites and web apps for large, real-world projects',
-      'Refined UI/UX that elevates a product’s professional image',
-      'End-to-end full-stack solutions from idea to launch',
-      'Flutter mobile apps backed by deep web expertise',
-      'Reliable delivery, high performance, and production-grade code',
+      'Modern websites and web apps with elegant UI and strong performance',
+      'Clear interfaces that reflect a product’s identity with polish',
+      'API-connected systems delivered from idea to launch',
+      'Flutter mobile apps backed by solid web expertise',
+      'Clean delivery, maintainable code, and results clients can trust',
     ],
     stats: {
       years: 'Years of Experience',
@@ -72,9 +71,9 @@ export const en: TranslationDictionary = {
   },
   skills: {
     eyebrow: 'Skills',
-    title: 'A practical toolkit for modern product engineering.',
+    title: 'Skills I use to build modern products with craft.',
     description:
-      'Technologies I use to design, build, and ship dependable web and mobile experiences.',
+      'The technologies and tools I rely on to create polished web and mobile experiences.',
     categories: {
       frontend: 'Frontend',
       backend: 'Backend',
@@ -112,7 +111,7 @@ export const en: TranslationDictionary = {
     eyebrow: 'Contact',
     title: 'Let’s build something thoughtful.',
     description:
-      'Open to collaborations, freelance work, and full-time opportunities. Reach out and tell me about your product.',
+      'Available for collaborations, freelance projects, and full-time roles. Message me and tell me about your product or idea.',
     emailLabel: 'Email',
     socialTitle: 'Find me online',
     formTitle: 'Send a message',

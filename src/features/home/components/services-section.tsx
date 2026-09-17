@@ -2,7 +2,6 @@ import {
   AppWindow,
   Boxes,
   Gauge,
-  Layers,
   Smartphone,
   Sparkles,
   Workflow,
@@ -18,7 +17,6 @@ import type { ServiceItem } from '@/shared/constants/services'
 const iconMap: Record<ServiceItem['icon'], typeof AppWindow> = {
   web: AppWindow,
   mobile: Smartphone,
-  fullstack: Layers,
   api: Workflow,
   ui: Sparkles,
   architecture: Boxes,

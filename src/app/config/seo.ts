@@ -3,7 +3,7 @@ import { siteIdentity } from '@/shared/constants/social'
 export const seoConfig = {
   title: 'Alaa Khaled | Software Developer',
   description:
-    'Software developer crafting modern web, mobile, and full-stack digital experiences.',
+    'Software developer crafting modern web and mobile digital experiences.',
   siteName: siteIdentity.name,
   twitterHandle: '',
   ogImagePath: '/og-image.svg',

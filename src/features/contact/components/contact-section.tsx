@@ -20,10 +20,10 @@ export function ContactSection() {
 
   return (
     <Section id="contact">
-      <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+      <div className="grid gap-7 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
           <SectionHeading
-            index="06"
+            index="05"
             eyebrow={t.contact.eyebrow}
             title={t.contact.title}
             description={t.contact.description}

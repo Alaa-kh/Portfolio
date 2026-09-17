@@ -163,6 +163,25 @@ html.locale-ar {
     font: inherit;
   }
 
+  button,
+  [type='button'],
+  [type='submit'],
+  [type='reset'],
+  [role='button'],
+  a,
+  summary,
+  label[for] {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  [type='button']:disabled,
+  [type='submit']:disabled,
+  [type='reset']:disabled,
+  [aria-disabled='true'] {
+    cursor: not-allowed;
+  }
+
   a {
     color: inherit;
     text-decoration: none;
@@ -197,7 +216,7 @@ html.locale-ar {
   }
 
   .section-space {
-    padding-block: clamp(4.5rem, 9vw, 7.5rem);
+    padding-block: clamp(2.75rem, 5.5vw, 4.75rem);
   }
 
   .glass-panel {
@@ -355,14 +374,17 @@ html.locale-ar {
 
   .animated-text {
     display: block;
+    line-height: 1.35;
+    overflow: visible;
   }
 
   .animated-word-wrap {
     display: inline-block;
     overflow: hidden;
-    vertical-align: bottom;
+    vertical-align: baseline;
     margin-inline-end: 0.35em;
-    padding-block: 0.08em;
+    padding-top: 0.12em;
+    padding-bottom: 0.22em;
   }
 
   .animated-word-wrap:last-child {
@@ -371,10 +393,12 @@ html.locale-ar {
 
   .animated-word {
     display: inline-block;
-    transform: translateY(115%);
+    transform: translateY(120%);
     opacity: 0;
     filter: blur(6px);
     color: inherit;
+    line-height: 1.35;
+    padding-bottom: 0.08em;
     transition:
       transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
       opacity 0.7s ease,
@@ -446,6 +470,119 @@ html.locale-ar {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr;
+  }
+
+  .skill-panel {
+    border: 1px solid color-mix(in oklab, var(--color-border) 88%, transparent);
+    border-radius: calc(var(--radius-card) + 0.15rem);
+    background:
+      linear-gradient(
+        155deg,
+        color-mix(in oklab, var(--color-card) 92%, transparent),
+        color-mix(in oklab, var(--color-bg-muted) 55%, transparent)
+      );
+    box-shadow: var(--shadow-soft);
+    min-height: 15.5rem;
+    transition:
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.35s ease,
+      box-shadow 0.35s ease;
+  }
+
+  .skill-panel::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(
+      180deg,
+      var(--color-accent),
+      var(--color-gold)
+    );
+    opacity: 0.75;
+    transition: width 0.35s ease, opacity 0.35s ease;
+  }
+
+  .skill-panel:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in oklab, var(--color-accent) 35%, var(--color-border));
+    box-shadow: var(--shadow-lift);
+  }
+
+  .skill-panel:hover::before {
+    width: 5px;
+    opacity: 1;
+  }
+
+  .skill-panel-gold::before {
+    background: linear-gradient(
+      180deg,
+      var(--color-gold),
+      var(--color-accent)
+    );
+  }
+
+  .skill-panel-icon {
+    display: inline-flex;
+    height: 2.6rem;
+    width: 2.6rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    border: 1px solid color-mix(in oklab, var(--color-border) 80%, transparent);
+    background: color-mix(in oklab, var(--color-bg) 55%, transparent);
+    color: var(--color-accent);
+    transition: transform 0.35s ease, background 0.35s ease, color 0.35s ease;
+  }
+
+  .skill-panel-gold .skill-panel-icon {
+    color: var(--color-gold);
+  }
+
+  .skill-panel:hover .skill-panel-icon {
+    transform: scale(1.06) rotate(-3deg);
+    background: var(--color-accent-soft);
+  }
+
+  .skill-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    border: 1px solid color-mix(in oklab, var(--color-border) 75%, transparent);
+    border-radius: 0.9rem;
+    background: color-mix(in oklab, var(--color-bg) 45%, transparent);
+    padding: 0.7rem 0.85rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-fg-muted);
+    transition:
+      transform 0.25s ease,
+      color 0.25s ease,
+      border-color 0.25s ease,
+      background 0.25s ease;
+  }
+
+  .skill-chip:hover {
+    transform: translateY(-1px);
+    color: var(--color-fg);
+    border-color: color-mix(in oklab, var(--color-accent) 35%, var(--color-border));
+    background: color-mix(in oklab, var(--color-accent-soft) 55%, transparent);
+  }
+
+  .skill-chip-dot {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 9999px;
+    background: var(--color-accent);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-accent) 18%, transparent);
+    flex-shrink: 0;
+  }
+
+  .skill-panel-gold .skill-chip-dot {
+    background: var(--color-gold);
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-gold) 18%, transparent);
   }
 
   .inview-scope :is(
@@ -689,6 +826,118 @@ html.locale-ar {
     animation: orb-pulse 9s ease-in-out infinite;
   }
 
+  .hero-orb-a {
+    animation-delay: 0s;
+  }
+
+  .hero-orb-b {
+    animation-delay: 1.4s;
+    animation-duration: 11s;
+  }
+
+  .hero-orb-c {
+    animation-delay: 2.2s;
+    animation-duration: 10s;
+  }
+
+  .hero-grid-fade {
+    background-image:
+      linear-gradient(to right, color-mix(in oklab, var(--color-border) 35%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in oklab, var(--color-border) 35%, transparent) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(circle at center, black 20%, transparent 72%);
+    opacity: 0.35;
+    animation: hero-grid-drift 18s linear infinite;
+  }
+
+  .hero-line {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: hero-rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .hero-line-1 { animation-delay: 0.05s; }
+  .hero-line-2 { animation-delay: 0.16s; }
+  .hero-line-3 { animation-delay: 0.28s; }
+  .hero-line-4 { animation-delay: 0.55s; }
+  .hero-line-5 { animation-delay: 1.2s; }
+
+  .hero-name .animated-word-wrap {
+    padding-bottom: 0.12em;
+  }
+
+  .hero-name-word {
+    transform: translateY(120%) scale(0.92);
+    filter: blur(10px);
+    transition:
+      transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.85s ease,
+      filter 0.85s ease;
+  }
+
+  .animated-text-visible .hero-name-word {
+    transform: translateY(0) scale(1);
+    filter: none;
+  }
+
+  .hero-subtitle-word {
+    transform: translateY(110%) rotate(-2deg);
+    filter: blur(8px);
+    transition:
+      transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.75s ease,
+      filter 0.75s ease;
+  }
+
+  .animated-text-visible .hero-subtitle-word {
+    transform: translateY(0) rotate(0deg);
+    filter: none;
+  }
+
+  .typewriter-text {
+    display: block;
+  }
+
+  .typewriter-caret {
+    display: inline-block;
+    margin-inline-start: 0.08em;
+    color: var(--color-accent);
+    font-weight: 500;
+    animation: typewriter-blink 0.9s steps(1, end) infinite;
+  }
+
+  .typewriter-done .typewriter-caret {
+    animation: typewriter-blink 0.9s steps(1, end) 4;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes typewriter-blink {
+    0%,
+    45% {
+      opacity: 1;
+    }
+    50%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes hero-rise {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes hero-grid-drift {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 48px 48px;
+    }
+  }
+
   @keyframes float-y {
     0%,
     100% {
@@ -797,6 +1046,8 @@ html.locale-ar {
     .mobile-nav,
     .mobile-nav-item,
     .luxury-card,
+    .skill-panel,
+    .skill-chip,
     .stagger-children > * {
       opacity: 1;
       transform: none;
@@ -809,6 +1060,9 @@ html.locale-ar {
     .animate-float-delayed,
     .animate-float-slow,
     .hero-orb,
+    .hero-grid-fade,
+    .hero-line,
+    .typewriter-caret,
     .text-gradient,
     .marquee-track,
     .pulse-ring::before,

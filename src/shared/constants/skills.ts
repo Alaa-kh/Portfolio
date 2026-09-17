@@ -16,7 +16,16 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     id: 'mobile',
-    skills: ['Flutter', 'Dart'],
+    skills: [
+      'Flutter',
+      'Dart',
+      'Riverpod',
+      'Bloc',
+      'Firebase',
+      'REST APIs',
+      'Responsive UI',
+      'App Store / Play Store',
+    ],
   },
   {
     id: 'tools',

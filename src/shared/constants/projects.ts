@@ -71,7 +71,6 @@ export const projects: Project[] = [
     image: estatehubImage,
     technologies: ['React', 'TypeScript', 'CSS', 'Responsive Design'],
     liveUrl: 'https://alaa-kh.github.io/Estate-Hub/',
-    featured: true,
   },
   {
     id: 'vita',
@@ -135,6 +134,7 @@ export const projects: Project[] = [
     image: vitaImage,
     technologies: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
     liveUrl: 'https://alaa-kh.github.io/Vita-Clinic/',
+    featured: true,
   },
   {
     id: 'lumina-market',

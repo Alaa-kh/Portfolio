@@ -142,7 +142,7 @@ export function SiteHeader() {
       <div
         id={menuId}
         className={cn(
-          'mobile-nav border-t border-border bg-card lg:hidden',
+          'mobile-nav relative z-10 border-t border-border bg-card lg:hidden',
           mobileOpen ? 'mobile-nav-open' : 'mobile-nav-closed',
         )}
       >

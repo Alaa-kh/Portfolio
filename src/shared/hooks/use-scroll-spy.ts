@@ -4,9 +4,9 @@ import type { NavItemId } from '@/shared/constants/navigation'
 
 const SECTION_IDS: NavItemId[] = [
   'home',
+  'projects',
   'about',
   'skills',
-  'projects',
   'services',
   'contact',
 ]

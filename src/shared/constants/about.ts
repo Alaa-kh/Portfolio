@@ -3,10 +3,10 @@
  * They are presentation values, not verified claims.
  */
 export const aboutStats = {
-  yearsOfExperience: '8+',
-  projectsDelivered: '50+',
-  technologies: '20+',
-  completedApps: '30+',
+  yearsOfExperience: '4+',
+  projectsDelivered: '12+',
+  technologies: '10+',
+  completedApps: '8+',
 } as const
 
 export const aboutVisualLabels = {

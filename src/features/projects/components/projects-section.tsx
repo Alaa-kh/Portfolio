@@ -25,7 +25,7 @@ export function ProjectsSection() {
   return (
     <Section id="projects">
       <SectionHeading
-        index="03"
+        index="01"
         eyebrow={t.projects.eyebrow}
         title={t.projects.title}
         description={t.projects.description}
@@ -38,14 +38,18 @@ export function ProjectsSection() {
         <ProjectCard project={featured} featured />
       </Reveal>
 
-      <div className="mt-14">
-        <h3 className="font-display mb-7 text-2xl font-bold text-fg">
+      <div className="mt-8">
+        <h3 className="font-display mb-4 text-2xl font-bold text-fg">
           {t.projects.allTitle}
         </h3>
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid items-stretch gap-5 md:grid-cols-2 xl:grid-cols-3">
           {others.map((project, index) => (
-            <Reveal key={project.id} delayMs={index * 70}>
-              <ProjectCard project={project} />
+            <Reveal
+              key={project.id}
+              delayMs={index * 70}
+              className="h-full md:max-xl:[&:last-child:nth-child(odd)]:col-span-2 xl:[&:last-child:nth-child(3n+1)]:col-span-3"
+            >
+              <ProjectCard project={project} className="h-full" />
             </Reveal>
           ))}
         </div>

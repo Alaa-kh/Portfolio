@@ -11,5 +11,5 @@ export const siteIdentity = {
   name: 'Alaa Khaled',
   shortName: 'AK',
   role: 'Software Engineer',
-  siteUrl: 'https://alaa-kh.github.io',
+  siteUrl: 'https://alaa-kh.github.io/Portfolio',
 } as const

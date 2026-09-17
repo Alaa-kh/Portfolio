@@ -1,5 +1,5 @@
 import { ExternalLink } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useLocale } from '@/shared/hooks/use-locale'
 import type { Project } from '@/features/projects/types/project'
 import { TiltCard } from '@/shared/components/motion/tilt-card'
@@ -20,18 +20,33 @@ export function ProjectCard({
   className,
 }: ProjectCardProps) {
   const { locale, t } = useLocale()
+  const navigate = useNavigate()
+  const detailsPath = `/projects/${project.slug}`
+
+  const openDetails = () => {
+    navigate(detailsPath)
+  }
 
   return (
-    <TiltCard maxTilt={featured ? 4 : 8} className={className}>
+    <TiltCard maxTilt={featured ? 4 : 8} className={cn('h-full', className)}>
       <article
+        role="link"
+        tabIndex={0}
+        onClick={openDetails}
+        onKeyDown={(event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault()
+            openDetails()
+          }
+        }}
         className={cn(
-          'group luxury-card overflow-hidden',
+          'group luxury-card flex h-full cursor-pointer flex-col overflow-hidden',
           featured && 'md:grid md:grid-cols-1',
         )}
       >
         <div
           className={cn(
-            'relative overflow-hidden bg-bg-muted',
+            'relative shrink-0 overflow-hidden bg-bg-muted',
             featured
               ? 'aspect-[16/9] min-h-[18rem] sm:min-h-[24rem] lg:min-h-[28rem]'
               : 'aspect-[16/10]',
@@ -56,7 +71,7 @@ export function ProjectCard({
 
         <div
           className={cn(
-            'relative z-10 flex flex-col p-5 md:p-7',
+            'relative z-10 flex flex-1 flex-col p-5 md:p-7',
             featured && 'md:p-9',
           )}
         >
@@ -68,27 +83,37 @@ export function ProjectCard({
           >
             {project.title}
           </h3>
-          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-fg-muted md:text-base">
+          <p
+            className={cn(
+              'mt-3 text-sm leading-relaxed text-fg-muted md:text-base',
+              featured ? 'max-w-3xl' : 'line-clamp-3 min-h-[4.5rem]',
+            )}
+          >
             {localize(
               featured ? project.description : project.shortDescription,
               locale,
             )}
           </p>
 
-          <div className="mt-5 flex flex-wrap gap-2">
+          <div className="mt-5 flex min-h-[2rem] flex-wrap gap-2">
             {project.technologies.slice(0, featured ? 6 : 4).map((tech) => (
               <Badge key={tech}>{tech}</Badge>
             ))}
           </div>
 
-          <div className="mt-7 flex flex-wrap gap-3">
-            <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+          <div className="mt-auto flex flex-wrap gap-3 pt-5">
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(event) => event.stopPropagation()}
+            >
               <Button size="sm">
                 {t.projects.viewLive}
                 <ExternalLink size={15} />
               </Button>
             </a>
-            <Link to={`/projects/${project.slug}`}>
+            <Link to={detailsPath} onClick={(event) => event.stopPropagation()}>
               <Button size="sm" variant="outline">
                 {t.projects.viewDetails}
               </Button>

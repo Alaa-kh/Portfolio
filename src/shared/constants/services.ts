@@ -4,7 +4,7 @@ export type ServiceItem = {
   id: string
   title: LocalizedString
   description: LocalizedString
-  icon: 'web' | 'mobile' | 'fullstack' | 'api' | 'ui' | 'architecture' | 'performance'
+  icon: 'web' | 'mobile' | 'api' | 'ui' | 'architecture' | 'performance'
 }
 
 export const services: ServiceItem[] = [
@@ -24,15 +24,6 @@ export const services: ServiceItem[] = [
     description: {
       en: 'Cross-platform mobile experiences with Flutter.',
       ar: 'تجارب موبايل متعددة المنصات باستخدام Flutter.',
-    },
-  },
-  {
-    id: 'fullstack',
-    icon: 'fullstack',
-    title: { en: 'Full-Stack Development', ar: 'تطوير Full-Stack' },
-    description: {
-      en: 'End-to-end product delivery across frontend and backend layers.',
-      ar: 'تسليم منتجات من البداية للنهاية عبر طبقات الواجهة والخلفية.',
     },
   },
   {

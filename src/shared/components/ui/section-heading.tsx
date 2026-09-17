@@ -22,14 +22,14 @@ export function SectionHeading({
   return (
     <Reveal
       className={cn(
-        'mb-12 max-w-3xl',
+        'mb-7 max-w-3xl md:mb-8',
         align === 'center' && 'mx-auto text-center',
         className,
       )}
     >
       <div
         className={cn(
-        'mb-5 flex items-center gap-3 md:mb-7',
+        'mb-3 flex items-center gap-3 md:mb-4',
         align === 'center' && 'justify-center',
       )}
       >
@@ -42,7 +42,7 @@ export function SectionHeading({
       <AnimatedText
         as="h2"
         text={title}
-        className="font-display text-3xl font-bold tracking-tight text-fg md:text-5xl"
+        className="font-display text-3xl leading-[1.4] font-bold tracking-tight text-fg md:text-5xl md:leading-[1.35]"
         delayMs={40}
       />
 
@@ -50,7 +50,7 @@ export function SectionHeading({
         <AnimatedText
           as="p"
           text={description}
-          className="mt-7 max-w-2xl text-base leading-relaxed text-fg-muted md:mt-8 md:text-lg"
+          className="-mt-1 max-w-2xl text-base leading-relaxed text-fg-muted md:-mt-0.5 md:text-lg"
           delayMs={160}
         />
       ) : null}

@@ -1,3 +1,4 @@
+import { CheckCircle2, Compass, Sparkles } from 'lucide-react'
 import { useLocale } from '@/shared/hooks/use-locale'
 import { AnimatedCounter } from '@/shared/components/motion/animated-counter'
 import { Reveal } from '@/shared/components/motion/reveal'
@@ -17,39 +18,59 @@ export function AboutSection() {
 
   return (
     <Section id="about">
-      <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
+      <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
         <div>
           <SectionHeading
-            index="01"
+            index="02"
             eyebrow={t.about.eyebrow}
             title={t.about.title}
           />
+
           <Reveal>
-            <div className="luxury-card p-6 md:p-8">
-              <p className="max-w-2xl text-base leading-relaxed text-fg-muted md:text-lg">
-                {t.about.summary}
-              </p>
-              <h3 className="mt-8 text-lg font-semibold text-fg">
-                {t.about.approachTitle}
-              </h3>
-              <p className="mt-3 max-w-2xl text-base leading-relaxed text-fg-muted">
-                {t.about.approach}
-              </p>
-              <h3 className="mt-8 text-lg font-semibold text-fg">
-                {t.about.expertiseTitle}
-              </h3>
-              <ul className="mt-4 space-y-3 stagger-children">
-                {t.about.expertise.map((item) => (
-                  <li
-                    key={item}
-                    className="flex gap-3 text-sm leading-relaxed text-fg-muted md:text-base"
-                  >
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <article className="luxury-card overflow-hidden">
+              <div className="border-b border-border/70 bg-gradient-to-br from-accent-soft/40 via-transparent to-gold/10 p-5 md:p-6">
+                <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-accent-soft text-accent">
+                  <Sparkles size={18} />
+                </div>
+                <p className="max-w-2xl text-base leading-relaxed text-fg md:text-lg">
+                  {t.about.summary}
+                </p>
+              </div>
+
+              <div className="grid gap-0 md:grid-cols-2">
+                <div className="border-b border-border/70 p-5 md:border-e md:border-b-0 md:p-6">
+                  <div className="mb-2 flex items-center gap-2 text-accent">
+                    <Compass size={18} />
+                    <h3 className="text-base font-semibold text-fg md:text-lg">
+                      {t.about.approachTitle}
+                    </h3>
+                  </div>
+                  <p className="text-sm leading-relaxed text-fg-muted md:text-base">
+                    {t.about.approach}
+                  </p>
+                </div>
+
+                <div className="p-5 md:p-6">
+                  <div className="mb-3 flex items-center gap-2 text-gold">
+                    <CheckCircle2 size={18} />
+                    <h3 className="text-base font-semibold text-fg md:text-lg">
+                      {t.about.expertiseTitle}
+                    </h3>
+                  </div>
+                  <ul className="space-y-2">
+                    {t.about.expertise.map((item) => (
+                      <li
+                        key={item}
+                        className="flex gap-3 rounded-2xl border border-border/60 bg-bg-muted/40 px-3.5 py-2.5 text-sm leading-relaxed text-fg-muted transition duration-300 hover:border-accent/35 hover:bg-accent-soft/30 hover:text-fg"
+                      >
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </article>
           </Reveal>
         </div>
 

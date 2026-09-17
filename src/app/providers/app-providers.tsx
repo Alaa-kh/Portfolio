@@ -8,8 +8,10 @@ type AppProvidersProps = {
 }
 
 export function AppProviders({ children }: AppProvidersProps) {
+  const basename = import.meta.env.BASE_URL.replace(/\/$/, '')
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename || undefined}>
       <ThemeProvider>
         <LocaleProvider>{children}</LocaleProvider>
       </ThemeProvider>
