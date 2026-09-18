@@ -3,12 +3,79 @@ import estatehubImage from '@/assets/projects/estatehub.png'
 import vitaImage from '@/assets/projects/vita.png'
 import luminaImage from '@/assets/projects/lumina.png'
 import lumenImage from '@/assets/projects/lumen.png'
+import surfacareImage from '@/assets/projects/surfacare.png'
 
 /**
  * Single source of truth for portfolio projects.
  * Set `featured: true` on exactly one project (or first featured wins).
  */
 export const projects: Project[] = [
+  {
+    id: 'surfacare',
+    slug: 'surfacare',
+    title: 'Surfa Care',
+    categoryKey: 'healthcare',
+    category: {
+      en: 'Healthcare / Home Nursing Platform',
+      ar: 'رعاية صحية / منصة تمريض منزلي',
+    },
+    shortDescription: {
+      en: 'A live home-nursing platform for Damascus that lets users browse services, review prices, and request visits online.',
+      ar: 'منصة تمريض منزلي حية لدمشق تتيح استعراض الخدمات والأسعار وطلب الزيارة أونلاين.',
+    },
+    description: {
+      en: 'Surfa Care is a production healthcare product that brings nursing care to the user’s home. Customers can choose a service, see pricing upfront, review the nurse profile before confirming, and track visit status through a unified web experience connected with the app account.',
+      ar: 'Surfa Care منتج رعاية صحية إنتاجي يوصل الرعاية التمريضية إلى البيت. يمكن للعميل اختيار الخدمة، معرفة السعر مسبقًا، مراجعة ملف الممرض قبل التأكيد، ومتابعة حالة الزيارة عبر تجربة ويب موحّدة مرتبطة بحساب التطبيق.',
+    },
+    problem: {
+      en: 'Booking trusted home nursing is often unclear: prices, nurse identity, and visit status are hard to follow in one place.',
+      ar: 'طلب تمريض منزلي موثوق غالبًا يكون غير واضح: السعر وهوية الممرض وحالة الزيارة يصعب متابعتها في مكان واحد.',
+    },
+    solution: {
+      en: 'A clear service-first web platform with transparent pricing, nurse review before approval, and order tracking from request to visit.',
+      ar: 'منصة ويب واضحة تبدأ من الخدمة، مع أسعار شفافة، ومراجعة ملف الممرض قبل الموافقة، ومتابعة الطلب من الإرسال حتى الزيارة.',
+    },
+    features: {
+      en: [
+        'Service catalog with search and filters',
+        'Price visibility before confirmation',
+        'Nurse profile review before visit approval',
+        'Order tracking and visit status',
+        'One account for website and app',
+      ],
+      ar: [
+        'كتالوج خدمات مع بحث وتصفية',
+        'عرض السعر قبل تأكيد الطلب',
+        'مراجعة ملف الممرض قبل الموافقة على الزيارة',
+        'متابعة الطلب وحالة الزيارة',
+        'حساب واحد للموقع والتطبيق',
+      ],
+    },
+    challenges: {
+      en: [
+        'Building trust in a sensitive healthcare booking flow',
+        'Keeping service details, pricing, and availability clear without clutter',
+      ],
+      ar: [
+        'بناء الثقة في تدفق حجز رعاية صحية حسّاس',
+        'إبقاء تفاصيل الخدمة والأسعار والتوفّر واضحة دون ازدحام',
+      ],
+    },
+    results: {
+      en: [
+        'A live platform serving Damascus and its countryside',
+        'End-to-end visit request flow from web to confirmation',
+      ],
+      ar: [
+        'منصة حية تخدم دمشق وريفها',
+        'تدفق طلب زيارة متكامل من الويب حتى التأكيد',
+      ],
+    },
+    image: surfacareImage,
+    technologies: ['React', 'TypeScript', 'Web App', 'Responsive Design'],
+    liveUrl: 'https://surfacare.cloud',
+    featured: true,
+  },
   {
     id: 'estatehub',
     slug: 'estatehub',
@@ -134,7 +201,6 @@ export const projects: Project[] = [
     image: vitaImage,
     technologies: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
     liveUrl: 'https://alaa-kh.github.io/Vita-Clinic/',
-    featured: true,
   },
   {
     id: 'lumina-market',

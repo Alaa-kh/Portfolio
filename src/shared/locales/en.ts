@@ -85,7 +85,7 @@ export const en: TranslationDictionary = {
     eyebrow: 'Projects',
     title: 'Selected work that shows how I build.',
     description:
-      'A focused selection of production-style applications across real estate, healthcare, commerce, and education.',
+      'A focused selection of production-style work across healthcare, real estate, commerce, and education — including Surfa Care.',
     featuredLabel: 'Featured Project',
     allTitle: 'More projects',
     viewLive: 'View Live Demo',
